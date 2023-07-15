@@ -1,0 +1,24 @@
+{
+  "name": "selfie-take",
+  "version": "1.0.0",
+  "description": "Selfie pic taker ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vloriandervishi/selfie-take.git"
+  },
+  "keywords": [
+    "Selfie",
+    "picture",
+    "data"
+  ],
+  "author": "Vlorian Dervishi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vloriandervishi/selfie-take/issues"
+  },
+  "homepage": "https://github.com/vloriandervishi/selfie-take#readme"
+}
