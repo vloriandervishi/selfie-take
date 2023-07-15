@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/vloriandervishi/selfie-take/issues"
   },
-  "homepage": "https://github.com/vloriandervishi/selfie-take#readme"
+  "homepage": "https://github.com/vloriandervishi/selfie-take#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
