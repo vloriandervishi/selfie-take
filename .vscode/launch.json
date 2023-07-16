@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         
+        
         {
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
             "file": "/Users/vd/selfie-take/Public/index.html",
-            "url":"http://localhost:8080",
+            "url":"http://localhost:3000/api/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
