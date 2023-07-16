@@ -3,16 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="../index.js"></script>
     <!-- <meta http-equiv="refresh" content="1" /> -->
-    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <!-- <script type="text/javascript" src="https://livejs.com/live.js"></script> -->
 
     <title>Selfie Taker</title>
   </head>
   <body>
-    <h1>Selfie Taker</h1>
-    <p>kk</p>
-    <p>kdjkls</p>
-    <div id="selfie"></div>
+    <p>latitude: <span id="latitude"></span></p>
+    <p>longitude: <span id="longitude"></span></p>
+    <script>
+      if ("geolocation" in navigator) {
+        console.log("geolocation is available");
+        navigator.geolocation.getCurrentPosition((position) => {
+          document.querySelector("#latitude").textContent =
+            position.coords.latitude;
+          document.querySelector("#longitude").textContent =
+            position.coords.longitude;
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          const latlong = { lat, lon };
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(latlong),
+          };
+          fetch("/api", options);
+        });
+      } else {
+        console.log("geolocation is not available");
+      }
+    </script>
   </body>
 </html>
